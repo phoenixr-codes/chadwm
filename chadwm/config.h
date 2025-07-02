@@ -160,7 +160,7 @@ static const Key keys[] = {
     // apps
     { MODKEY,                           XK_c,       spawn,          SHCMD("rofi -show drun") },
     { MODKEY,                           XK_Return,  spawn,          SHCMD("kitty") },
-    { MODKEY,                           XK_period,  spawn,          SHCMD("flatpak run it.mijorus.smile") },
+    { MODKEY,                           XK_period,  spawn,          SHCMD("rofimoji --action copy") },
     { MODKEY|ShiftMask,                 XK_ssharp,  spawn,          SHCMD("zathura /usr/local/share/doc/dwm/CheatSheet.pdf") },
 
     // toggle stuff
@@ -234,7 +234,7 @@ static const Key keys[] = {
     { MODKEY|ShiftMask,                 XK_w,       setborderpx,    {.i = default_border } },
 
     // kill dwm
-    { MODKEY|ControlMask,               XK_q,       spawn,        SHCMD("killall bar.sh chadwm") },
+    { MODKEY|ControlMask,               XK_q,       spawn,        SHCMD("killall chadwm") }, // TODO: add bar/display.nu
 
     // kill window
     { MODKEY,                           XK_q,       killclient,     {0} },
