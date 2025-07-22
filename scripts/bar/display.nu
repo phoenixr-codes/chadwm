@@ -45,7 +45,7 @@ def updates [] {
       $"[ (fg (style).updates.color) ($updates) updates(reset) ]"
     },
     1 | 124 => $"[ (fg (style).updates.color) Updates unknown(reset) ]",
-    2 => $"[ (fg (style).update.color) Fully Updated(reset) ]"
+    2 => $"[ (fg (style).updates.color) Fully Updated(reset) ]"
   }
 }
 
