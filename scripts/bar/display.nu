@@ -4,12 +4,12 @@
 #       convenient. This way you don't have to restart dwm when tweaking around.
 
 use ~/.config/nushell/xx.nu
-use themes/nord.nu *
+use themes/catppuccin.nu *
 
 const intervals = [
   [subject,    interval];
   [time,       1sec]
-  [updates,    5min]
+  [updates,    30sec]
   [wlan,       1sec]
   [volume,     1ms]
   [battery,    10sec]
@@ -18,7 +18,10 @@ const intervals = [
   [cpu,        30sec]
   [other,      1sec]
 ]
+
 const reload_interval = 500ms
+
+const redact_ssid = false
 
 def fg [color: string] {
   $"^c($color)^"
@@ -110,7 +113,7 @@ def mem [] {
 
 def wlan [] {
 	if (xx wlan connected) {
-	  $"[ (fg (style).text.color.dark)(bg (style).wlan.color) 󰤨 (reset)(fg (style).text.color.light) (try { xx wlan ssid } catch { "Connected" })(reset) ]"
+	  $"[ (fg (style).text.color.dark)(bg (style).wlan.color) 󰤨 (reset)(fg (style).text.color.light) (try { if $redact_ssid { "[redacted]" } else { xx wlan ssid } } catch { "Connected" })(reset) ]"
   } else {
 	  $"[ (fg (style).text.color.dark)(bg (style).wlan.color) 󰤭 (reset)(fg (style).text.color.light) Disconnected(reset) ]"
   }

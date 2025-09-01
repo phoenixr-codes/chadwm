@@ -40,7 +40,7 @@ static const int new_window_attach_on_end = 0; /*  1 means the new window will a
 static const char *fonts[]          = {"Iosevka:style:medium:size=12" ,"JetBrainsMono Nerd Font Mono:style:medium:size=19" };
 
 // theme
-#include "themes/nord.h"
+#include "themes/catppuccin.h"
 
 static const char *colors[][3]      = {
     /*                     fg       bg      border */
@@ -159,6 +159,7 @@ static const Key keys[] = {
 
     // apps
     { MODKEY,                           XK_c,       spawn,          SHCMD("rofi -show drun") },
+    { MODKEY,                           XK_y,       spawn,          SHCMD("kitty yazi") },
     { MODKEY,                           XK_Return,  spawn,          SHCMD("kitty") },
     { MODKEY,                           XK_period,  spawn,          SHCMD("rofimoji --action copy") },
     { MODKEY|ShiftMask,                 XK_ssharp,  spawn,          SHCMD("zathura /usr/local/share/doc/dwm/CheatSheet.pdf") },

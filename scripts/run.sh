@@ -1,4 +1,6 @@
-#!/bin/sh
+#!/bin/bash
+
+# FIXME: when this script is done (dwm quit), also quit bar
 
 set_background() {
   # Use previous background if there is one.
@@ -12,14 +14,14 @@ set_background() {
 load_bar() {
   bar_path=~/.config/chadwm/scripts/bar/display.nu
   old_modified=$(stat -c "%Y" "$bar_path")
-  nu "$bar_path" &
+  "$bar_path" &
   bar_pid=$!
   while true; do
     last_modified=$(stat -c "%Y" "$bar_path")
     if [ "$last_modified" -gt "$old_modified" ] || ! kill -0 "$bar_pid" 2>/dev/null; then
       kill "$bar_pid"
       wait "$bar_pid" 2>/dev/null
-      nu "$bar_path" &
+      "$bar_path" &
       bar_pid=$!
       old_modified="$last_modified"
     fi

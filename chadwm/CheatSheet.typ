@@ -18,6 +18,7 @@
 #table(
   theader(colspan: 2)[Applications],
   kbd(cmd, "c"), [Launch *Launcher*],
+  kbd(cmd, "y"), [Launch *Yazi*],
   kbd(cmd, enter), [Launch *Terminal*],
   kbd(cmd, "."), [Launch *Emoji Picker*],
 )
