@@ -148,13 +148,12 @@ static const Key keys[] = {
 
     // screenshot fullscreen and cropped
     {ControlMask,                       XK_Print,   spawn,
-        SHCMD("maim ~/Downloads/$(date '+Screenshot_%Y-%m-%d_%H-%M-%S.png')")},
+        SHCMD("maim --quiet --hidecursor ~/Downloads/$(date '+Screenshot_%Y-%m-%d_%H-%M-%S.png')")},
     {0,                                 XK_Print,   spawn,
-        SHCMD("maim --select ~/Downloads/$(date '+Screenshot_%Y-%m-%d_%H-%M-%S.png')")},
+        SHCMD("maim --quiet --hidecursor --select ~/Downloads/$(date '+Screenshot_%Y-%m-%d_%H-%M-%S.png')")},
 
     // functions
     // TODO: keybind list on F1
-    // TODO: airplane mode on F8
     {0,                                 XK_F10,     spawn,          SHCMD("dm-tool lock") },
 
     // apps

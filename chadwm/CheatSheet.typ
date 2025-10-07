@@ -35,6 +35,7 @@
   theader(colspan: 2)[Work spaces],
   kbd(cmd, "←"), [View left work space],
   kbd(cmd, "→"), [View right work space],
+  kbd(cmd, "1-9"), [View work space at position],
   kbd(cmd, "Tab"), [Toggle view of work space],
 )
 
@@ -89,7 +90,8 @@
 
 #table(
   theader(colspan: 2)[Functions],
-  kbd("Ctrl", "PrtScn"), [Take screenshot],
-  kbd("PrtScn"), [Take screenshot of selected area],
-  kbd("Lock"), [Log out],
+  kbd("Fn", "Ctrl", "PrtScn"), [Take screenshot of entire screen],
+  kbd("Fn", "PrtScn"), [Take screenshot of selected area],
+  kbd("Fn", " "), [Log out],
+  kbd("󰀝 "), [Toggle WiFi],
 )
