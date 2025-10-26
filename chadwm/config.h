@@ -148,9 +148,9 @@ static const Key keys[] = {
 
     // screenshot fullscreen and cropped
     {ControlMask,                       XK_Print,   spawn,
-        SHCMD("maim --quiet --hidecursor ~/Downloads/$(date '+Screenshot_%Y-%m-%d_%H-%M-%S.png')")},
+        SHCMD("maim --quiet --hidecursor ~/Downloads/$(date '+Screenshot_%Y-%m-%d_%H-%M-%S.png'); notify-send --urgency low 'Took screenshot'")},
     {0,                                 XK_Print,   spawn,
-        SHCMD("maim --quiet --hidecursor --select ~/Downloads/$(date '+Screenshot_%Y-%m-%d_%H-%M-%S.png')")},
+        SHCMD("maim --quiet --hidecursor --select ~/Downloads/$(date '+Screenshot_%Y-%m-%d_%H-%M-%S.png'); notify-send --urgency low 'Took screenshot'")},
 
     // functions
     // TODO: keybind list on F1
